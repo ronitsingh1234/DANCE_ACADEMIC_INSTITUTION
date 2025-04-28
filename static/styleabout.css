@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.aboutus p{
+    text-align: center;
+}
+h1{
+    padding-top: 10px;
+    font-weight: 800;
+    font-size: 50px;
+    color: black;
+}
+
+
+hr {
+    margin: 20px;
+}
+
+.content {
+    align-items: center;
+    text-align: center;
+    margin: 0 260px;
+    margin-top: 20px;
+}
+
+.content h2 {
+    background: linear-gradient(to right,
+    rgb(251, 251, 251),
+    rgb(74, 255, 249),
+    rgb(230, 6, 255),
+    rgb(251, 251, 251));
+background-size: 200%;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: animate 5s linear infinite;
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 40px;
+}
+
+@keyframes animate {
+    to {
+        background-position: 200%;
+    }
+}
+
+.content h3 {
+    font-size: 25px;
+    margin: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: 18px;
+    margin: 40px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+.para {
+    border: 2px solid black;
+}
+
+.btn {
+    display: block;
+    border: 2px solid black;
+    margin: 20px 400px;
+    width: 200px;
+    background: transparent;
+}
+
+
+.section2 {
+    margin: 50px;
+}
+
+.aboutus {
+    background: linear-gradient(to bottom,
+    rgb(123, 0, 239),
+    rgb(164, 92, 236),
+    rgb(158, 103, 214),
+    #8930c4,
+    #8a16c9);  
+    height: 1300px;
+    color: white;
+}
+
+.box {
+    display: flex;
+}
+
+.box1 {
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 50px 80px;
+    border-radius: 30px;
+}
+
+.box1 h1 {
+    font-size: 30px;
+    margin: 20px;
+    font-weight: 700;
+}
+
+.box1 p {
+    text-align: left;
+    margin: 0 10px;
+}
+
+.btn1 {
+    margin: 20px 10px;
+    height: 30px;
+    width: 120px;
+    border: 2px solid black;
+    background: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s  ease;
+}
+
+.btn1:hover{
+    scale: 1.1;
+}
+
+#line{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,78 @@
+doctype html
+html 
+    head 
+       link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css", integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer")
+       title Ronit Dance Academy 
+       block scripts 
+       block style
+    body 
+        nav#navbar.top 
+            ul
+                div#logo
+                    img(src = "https://static.vecteezy.com/system/resources/thumbnails/021/027/675/small/black-graphic-silhouette-of-a-dancing-man-isolated-element-logo-png.png")
+                    | RDA
+                li #[a(href = "/") Home]
+                li #[a(href = "/aboutus") About Us]
+                li #[a(href = "/services") Services]
+                li #[a(href = "/classinfo") Class Info]
+                li #[a(href = "/contact") Contact us]
+                
+                if user
+                  i.fas.fa-bell.bell
+                  i.fas.fa-user.user
+                  li(style="color: white; position:absolute; right:50px;")
+                  p.email  #{user.email}
+                  a(href="/logout")
+                      button.signin Logout
+
+                else
+                  i.fas.fa-bell
+                  a(href="/login")
+                    button.login Log In
+                  a(href="/signup")
+                    button.signin Sign Up
+              
+        block content 
+        section#sponsorsSection
+          div.first
+              h3 Ronit Dance Academy 
+              p  Dance is one of the most expressive crafts known to mankind. People of all ages and preferences admire dance and, people inIndia are no different. In our country…
+          div.second
+            h3 Dance Course 
+            ul 
+              li Ballet
+              li Ballroom
+              li Contemporary
+              li Hip Hop
+              li Jazz
+              li Tap Dancing
+              li Folk Dance
+              li Irish Dance
+          div.third
+            h3 Dance Studio 
+            ul 
+              li ABOUT US
+              li PACKAGE
+              li ONLINE CLASSES
+              li OUR EVENTS
+              li OUR BLOG
+              li CAREER
+          div.fourth
+            h3 Get In Touch 
+            ul 
+              li 
+               i.fab.fa-google
+               | &nbsp;&nbsp;ronitsingh9568@gmail.com
+              li 
+               i.fas.fa-phone
+               | &nbsp;&nbsp;+91 8445356705
+              li 
+               i.fas.fa-map-marker-alt
+               | &nbsp;&nbsp;Dehradun, Premnagar 248001
+
+              li Ronit fashion
+              li Ronit Dance Troupe
+        footer 
+         | Terms & Conditions | Privacy Policy © 2025 | All rights reserved - Ronit Dance Academy.
+        script 
+         include ../static/index.js

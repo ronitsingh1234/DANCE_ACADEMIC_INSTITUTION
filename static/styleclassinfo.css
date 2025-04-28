@@ -1,0 +1,198 @@
+.classinfocontainer {
+  position: relative;
+  height: 1350px;
+  background: linear-gradient(rgb(123, 0, 239),rgb(160, 160, 253) ,#8a16c9);
+}
+
+.class {
+  background-color: rgba(255, 255, 255, 0.819);
+  width: 1300px;
+  border-radius: 50px;
+  margin-left: 120px;
+  position: relative;
+  top: 30px;
+
+}
+
+.class-info {
+  padding: 2rem 2rem;
+}
+
+.class-info h4 {
+  text-align: center;
+  font-size: 40px;
+  color: #2c2c2c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.class-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 50px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+}
+
+.class-type {
+  position: relative;
+  height: 260px;
+  background: linear-gradient(135deg, rgba(123, 0, 239, 0.1), rgba(48, 83, 255, 0.1));
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.class-type h5 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #3b3b3b;
+}
+
+.class-type p {
+  font-size: 1rem;
+  margin: 0.4rem 0;
+  color: #555;
+}
+
+/* CTA Link Button */
+.class-type a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(86, 42, 247);
+  /* Mixed color */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 5px;
+}
+
+.class-type a:hover {
+  background-color: rgb(66, 30, 220);
+}
+
+/* Hover Effects */
+.class-type:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Upcoming Events Section */
+.events {
+  margin-top: 5rem;
+  padding: 2.5rem;
+  box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.773);
+  width: 1300px;
+  border-radius: 50px;
+  margin-left: 120px;
+}
+
+.events h4 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2a2a2a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+}
+
+.event-list li {
+  background-color: rgba(123, 0, 239, 0.07);
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  padding-left: 5px;
+  border-left: 4px solid rgb(123, 0, 239);
+  border-radius: 6px;
+  color: #333;
+  font-size: 1.2rem;
+  width: 800px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.event-list li strong {
+  color: rgb(86, 42, 247);
+}
+
+/* Pricing Section */
+.pricing {
+  margin-top: 3rem;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.773);
+  width: 1300px;
+  border-radius: 50px;
+  margin-left: 120px;
+  margin-bottom: 100px;
+}
+
+.pricing h4 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* Plan cards layout */
+.plan {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(123, 0, 239, 0.08), rgba(48, 83, 255, 0.08));
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  width: 350px;
+  height: 300px;
+  margin: 0 30px;
+  transition: transform 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.plan h5 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  margin-left: 47px;
+}
+
+.plan p {
+  font-size: 1.2rem;
+  color: rgb(86, 42, 247);
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  margin-left: 47px;
+}
+
+.plan ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.plan ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}

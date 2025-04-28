@@ -1,0 +1,87 @@
+extends base.pug
+
+block scripts 
+  script(src = "/static/index.js")
+
+block style 
+  style 
+    include ../static/style.css
+    include ../static/styleclassinfo.css
+
+block content 
+  .classinfocontainer
+    .class
+      .class-info
+        h4 Class Information
+
+      .class-details
+        .class-type
+          h5 Kids Dance Classes
+          p Age Group: 4–12 years
+          p Schedule: Mon, Wed, Fri – 4:00 PM to 5:30 PM
+          p Styles Covered: Bollywood, Hip-Hop Basics, Freestyle
+          a(href="#") Enroll Now
+
+        .class-type
+          h5 Teen & Adult Dance Classes
+          p Age Group: 13+ years
+          p Schedule: Tue, Thu, Sat – 6:00 PM to 7:30 PM
+          p Styles Covered: Contemporary, Hip-Hop, Salsa, Zumba
+          a(href="#") Join the Batch
+
+        .class-type
+          h5 Weekend Special Batches
+          p Age Group: All Ages
+          p Schedule: Saturday & Sunday – 11:00 AM to 1:00 PM
+          p Focus: Fitness Dance, Choreography Practice, Guest Trainers
+          a(href="#") Reserve Your Spot
+
+        .class-type
+          h5 Online Classes
+          p Platform: Zoom / Google Meet
+          p Timing: Flexible slots available (morning & evening)
+          p Includes: Live sessions, practice videos, feedback calls
+          a(href="#") Start Learning Online
+
+    //- Upcoming Events Section
+    .events
+      h4 Upcoming Events & Workshops
+      ul.event-list
+        li
+          strong Zumba Blast –
+          |  April 27, Saturday @ 11:00 AM
+        li
+          strong Guest Choreo Workshop –
+          |  May 5, Sunday @ 3:00 PM
+        li
+          strong Dance Camp –
+          |  May 18–20, 10:00 AM to 2:00 PM
+
+    //- Pricing / Membership Plans Section
+    .pricing
+      h4 Membership Plans
+      .plan
+        h5 Basic Plan
+        p ₹1200 / month
+        ul
+          li 3 Classes / Week
+          li Access to 2 Dance Styles
+          li Online & Offline Options
+
+      .plan
+        h5 Standard Plan
+        p ₹2000 / month
+        ul
+          li 5 Classes / Week
+          li All Dance Styles Included
+          li Priority Event Access
+
+      .plan
+        h5 Premium Plan
+        p ₹3000 / month
+        ul
+          li Unlimited Classes
+          li 1 Free Private Session / Month
+          li Studio Booking Discounts
+          li Early Access to Workshops
+  hr

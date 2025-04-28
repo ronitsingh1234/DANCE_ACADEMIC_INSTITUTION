@@ -1,0 +1,60 @@
+doctype html
+html 
+  head 
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css", integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer")
+    title Login Page
+    script.
+      function redirectIfSuccess(message) {
+        if (message && message.toLowerCase().includes('successful')) {
+          setTimeout(() => {
+            window.location.href = '/'; // Redirect to home page
+          }, 500); // delay in milliseconds
+        }
+      }
+  body(onload=`redirectIfSuccess('${message || ''}')`)
+    block scripts
+
+    block style 
+      style 
+        include ../static/style.css
+        include ../static/login.css
+
+    block content
+      nav#navbar.top 
+        ul
+          div#logo
+            img(src = "https://static.vecteezy.com/system/resources/thumbnails/021/027/675/small/black-graphic-silhouette-of-a-dancing-man-isolated-element-logo-png.png")
+            | RDA
+          li #[a(href = "/") Home]
+          li #[a(href = "/aboutus") About Us]
+          li #[a(href = "/services") Services]
+          li #[a(href = "/classinfo") Class Info]
+          li #[a(href = "/contact") Contact us]
+
+          if user
+            i.fas.fa-bell.bell
+            i.fas.fa-user.user
+            p.email  #{user.email}
+            a(href="/logout")
+                button.signin Logout
+
+          else
+            i.fas.fa-bell
+            a(href="/login")
+              button.login Log In
+            a(href="/signup")
+              button.signin Sign In
+
+      .container
+        .page
+          h1 Login
+
+          if message
+            p(style="color: white; text-align: center; margin: 10px;") #{message}
+
+          form(action="/login" method="POST")
+            input(type="email" name="email" placeholder="Email" required)
+            input(type="password" name="password" placeholder="Password" required)
+            button(type="submit") Login
+            a(href = "/signup")
+              | Signup

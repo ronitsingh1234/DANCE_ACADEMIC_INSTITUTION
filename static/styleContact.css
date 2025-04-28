@@ -1,0 +1,110 @@
+h1 {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: black;
+}
+
+.myform {
+    width: 1100px;
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 260px;
+    height: 300px;
+    background-color: transparent;
+}
+
+.myinput {
+    color: white;
+    font-size: 20px;
+    padding: 9px;
+    width: 500px;
+    height: 50px;
+    margin: 8px;
+    background: transparent;
+    border: 2px solid rgb(239, 239, 239);
+    border-radius: 10px;
+    outline: none;
+}
+
+
+textarea {
+    width: 1020px;
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    height: 150px;
+    margin: 8px;
+    background: transparent;
+    border: 2px solid rgb(239, 239, 239);
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+textarea::placeholder {
+    color: rgb(190, 185, 185);
+
+}
+
+.myinput::placeholder {
+    color: rgb(190, 185, 185);
+}
+
+
+.container {
+    display: block;
+    height: 640px;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.container h2 {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+
+.container::before {
+    content: "";
+    background: linear-gradient(to bottom, rgb(123, 0, 239), #8a16c9);
+    position: absolute;
+    width: 100%;
+    height: 640px;
+    z-index: -1;
+}
+
+.btn {
+    width: 120px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 430px;
+}
+
+
+.message {
+    position: absolute;
+    margin: 20px;
+    top: 180px;
+    left: 620px;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.1;
+}
+
+.success {
+    color: #ffffff;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

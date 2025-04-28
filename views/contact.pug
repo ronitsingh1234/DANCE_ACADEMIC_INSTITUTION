@@ -1,0 +1,35 @@
+extends base.pug
+
+block scripts 
+  script(src = "/static/index.js")
+  script.
+    setTimeout(() => {
+      const msg = document.querySelector('.message');
+      if (msg) msg.style.display = 'none';
+    }, 1000); // 3 seconds
+
+block style 
+   style 
+    include ../static/style.css
+    include ../static/styleContact.css
+
+
+block content
+  if message
+    .message(class=success ? 'success' : 'error') #{message}
+
+  div.container
+    h1 Contact Us
+    h2 To contact one of our other offices please see the details below.
+    form(action="/contact", method="POST", class="myform")
+      input(type="text", name="firstName", placeholder="First Name*", class="myinput")
+      input(type="text", name="lastName", placeholder="Last Name*", class="myinput")
+      input(type="email", name="email", placeholder="Email address*", class="myinput")
+      input(type="tel", name="phone", placeholder="Contact number", class="myinput")
+      input(type="text", name="street", placeholder="Street", class="myinput")
+      input(type="text", name="city", placeholder="City", class="myinput")
+      textarea(name="brief", placeholder="Brief Description of Yourself")
+      button(type="submit", class="btn") Submit
+
+  hr
+    
