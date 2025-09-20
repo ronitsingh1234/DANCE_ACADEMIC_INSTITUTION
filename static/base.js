@@ -1,34 +1,33 @@
-const a = document.querySelector('.fa-arrow-right')
-let slider = document.querySelector('.slider')
-a.addEventListener('click', ()=>{
-    slider.scrollBy({
-        top:0,
-        left:1520,
-        behavior:'smooth'
-    });
+const rightArrow = document.querySelector('.fa-arrow-right');
+const leftArrow  = document.querySelector('.fa-arrow-left');
+const slider     = document.querySelector('.slider');
+
+if (rightArrow && slider) {
+  rightArrow.addEventListener('click', () => {
+    slider.scrollBy({ left: 1520, behavior: 'smooth' });
+  });
+}
+
+if (leftArrow && slider) {
+  leftArrow.addEventListener('click', () => {
+    slider.scrollBy({ left: -1520, behavior: 'smooth' });
+  });
+}
+
+window.addEventListener("scroll", () => {
+  const long   = document.querySelector(".long");
+  const img1   = document.querySelector(".image1");
+  const img2   = document.querySelector(".image2");
+  const img3   = document.querySelector(".image3");
+
+  if (long) long.style.marginTop = window.scrollY * 2 + "px";
+  if (img1) {
+    img1.style.marginLeft = window.scrollY * 1.2 + "px";
+    img1.style.marginBottom = window.scrollY * 1.2 + "px";
+  }
+  if (img2) {
+    img2.style.marginRight = window.scrollY * 1.2 + "px";
+    img2.style.marginBottom = window.scrollY * 1.2 + "px";
+  }
+  if (img3) img3.style.marginTop = window.scrollY * 0.4 + "px";
 });
-
-
-
-const b = document.querySelector('.fa-arrow-left')
-let slider1 = document.querySelector('.slider')
-b.addEventListener('click', ()=>{
-    slider1.scrollBy({
-        top:0,
-        left:-1520,
-        behavior:'smooth'
-    });
-});
-
-
-window.addEventListener("scroll",()=>{
-    document.querySelector(".long").style.marginTop = window.scrollY *  2 + "px";
-    document.querySelector(".image1").style.marginLeft = window.scrollY * 1.2+ "px";
-    document.querySelector(".image2").style.marginRight= window.scrollY * 1.2 + "px";
-    document.querySelector(".image1").style.marginBottom= window.scrollY * 1.2 + "px";
-    document.querySelector(".image2").style.marginBottom= window.scrollY * 1.2 + "px";
-    document.querySelector(".image3").style.marginTop= window.scrollY * .4 + "px";
-});
-
-
-
