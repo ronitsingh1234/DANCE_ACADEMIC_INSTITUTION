@@ -16,20 +16,11 @@ html
           li #[a(href = "/services") Services]
           li #[a(href = "/classinfo") Class Info]
           li #[a(href = "/contact") Contact us]
-
-          if user
-            i.fas.fa-bell.bell
-            i.fas.fa-user.user
-            p.email  #{user.email}
-            a(href="/logout")
-                button.signin Logout
-
-          else
-            i.fas.fa-bell
-            a(href="/login")
-              button.login Log In
-            a(href="/signup")
-              button.signin Sign Up
+          i.fas.fa-bell
+          a(href="/login")
+            button.login Log In
+          a(href="/signup")
+            button.signin Sign Up
               
         section#introSection
            div.long
@@ -48,51 +39,59 @@ html
               h3 Ballet
               p Ballet productions vary between using elaborate costumes and staging and using minimal costuming and bare staging
               img(src = "https://images.stockcake.com/public/2/3/8/238e0c01-c6e8-4adf-a178-1fb2eb1cb4c1_medium/dancers-at-twilight-stockcake.jpg")
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
             div.card
               h3 Jazz
               p Known for its improvisational and dramatic body movements, the jazz dancing grew in popularity in early twentieth-century jazz clubs.
               img(src = "https://st5.depositphotos.com/2692701/67165/v/450/depositphotos_671655300-stock-illustration-silhouette-dancing-girls.jpg")
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
             div.card
               h3 Contemporary
               p Drawing on classical, modern and jazz dance styles, contemporary dance has evolved to incorporate many characteristics of a broader range of dance forms.
               img(src = "https://www.shutterstock.com/image-photo/young-african-american-male-dancer-600nw-2484208575.jpg")
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
             div.card
               h3 Hip-Hop
               p Hip-hop dancing refers to a range of street dances that developed in relation to hip hop music and culture. 
               img(src = "https://t3.ftcdn.net/jpg/04/16/77/72/360_F_416777220_1wLyOwwSXAHJRCQbylVIXif3exe2X3gP.jpg")
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
             div.card
               h3 Ballroom
               p Dances within these categories include the waltz, tango and foxtrot, and pasodoble, bolero and samba.
               img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3JGmivArDS3rbNBv2PLAz-Gc_oY_L7QRcMQ&s")
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
             div.card
               h3 Tap Dancing
               p Often performed as part of musical theatre, tap dancing often focuses on choreography and formations, with more than one tap dancer performing at once.
               img(src = "https://t3.ftcdn.net/jpg/12/65/86/52/360_F_1265865233_Lh1MX1UsNUfz8Ji8jigjdcXzJJSnaSAJ.jpg")
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
             div.card
               h3  Folk Dance
               p Folk dancing is celebrated worldwide with people of different cultures and religions using various forms of folk dance to portray emotions, even aspects of daily life.
               img(src = "https://t4.ftcdn.net/jpg/00/84/09/49/360_F_84094964_qotli3Xd9fkFb41IaRqrt268VtexRpM8.jpg")
 
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
             div.card
               h3 Irish Dance
               p Most Irish dancing events are traditionally accompanied by signing and music. During festivals, dances are held to showcase talent and to compete for trophies.
               img(src = "https://mishmashmanagement.com/wp-content/uploads/2020/03/20-Acrobatics.png")
-              button(class = "btn")
-                | Join Now
+              a(href = "/enroll")
+                button(class = "btn")
+                  | Join Now
         hr
         section#whyRDA
           h2 Why Choose Ronit Dance Academy?
@@ -150,6 +149,16 @@ html
 
               li Ronit fashion
               li Ronit Dance Troupe
+
+              div.logos
+               a(href = "https://www.facebook.com/" target="_blank")
+                  i.fa-brands.fa-facebook
+               a(href = "https://www.whatsapp.com/" target="_blank")
+                  i.fa-brands.fa-whatsapp
+               a(href = "https://www.instagram.com/" target="_blank")
+                i.fa-brands.fa-instagram
+               a(href = "https://www.twitter.com/" target="_blank")
+                  i.fa-brands.fa-twitter
         footer 
          | Terms & Conditions | Privacy Policy © 2025 | All rights reserved - Ronit Dance Academy.
         script 

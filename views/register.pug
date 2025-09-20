@@ -1,0 +1,38 @@
+extends base.pug
+
+block scripts 
+  script(src = "/static/register.js")
+
+block style 
+  style 
+    include ../static/style.css
+    include ../static/register.css
+
+block content 
+  .maincontainer23
+    .form-container
+      .form-toggle
+        button#show-signup.toggle-btn.active Signup
+        button#show-login.toggle-btn Login
+
+      form#signup-form.form.active
+        h2 Create Account 🚀
+        .input-group
+          label(for="signup-email") Email
+          input#signup-email(type="email" required)
+        .input-group
+          label(for="signup-password") Password
+          input#signup-password(type="password" required)
+        button.submit-btn(type="submit") Signup
+
+      form#login-form.form
+        h2 Welcome Back 👋
+        .input-group
+          label(for="login-email") Email
+          input#login-email(type="email" required)
+        .input-group
+          label(for="login-password") Password
+          input#login-password(type="password" required)
+        button.submit-btn(type="submit") Login
+
+    script(type="module" src="/static/register.js" defer)

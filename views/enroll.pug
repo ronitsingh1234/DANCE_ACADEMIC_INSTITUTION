@@ -1,0 +1,95 @@
+doctype html
+html
+  head
+    title Enroll in a Dance Course
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
+    link(rel="stylesheet", href="/static/style.css")
+    script.
+    style.
+      body {
+        width:100%;
+        height:740px;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, rgb(123, 0, 239),rgb(138, 22, 201));
+      }
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        background:rgba(249, 249, 249, 0.88);
+      }
+      h1, h2 {
+        text-align: center;
+        color: #333;
+      }
+      form {
+        margin-top: 30px;
+      }
+      input, select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .btn111 {
+        text-align:center;
+        background: #ff3e6c;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+      }
+      .btn111:hover {
+        scale:1.03;
+        background: #e2335f;
+      }
+
+  body
+    nav#navbar
+      ul
+        li #[a(href="/") Home]
+        li #[a(href="/classinfo") Back to Classes]
+        li #[a(href="/contact") Contact Us]
+
+    .container
+      h1 Course Enrollment
+      p(style="text-align:center") Fill in your details below to join your favorite dance course.
+
+      form(action="#", method="POST")
+        label(for="name") Full Name:
+        input(type="text", name="name", id="name", placeholder="Enter your full name", required)
+
+        label(for="email") Email:
+        input(type="email", name="email", id="email", placeholder="Enter your email", required)
+
+        label(for="phone") Phone:
+        input(type="tel", name="phone", id="phone", placeholder="Enter your phone number", required)
+
+        label(for="course") Select Course:
+        select(name="course", id="course", required)
+          option(value="" disabled selected) -- Choose a course --
+          option(value="Hip-Hop") Hip-Hop
+          option(value="Ballet") Ballet
+          option(value="Jazz") Jazz
+          option(value="Contemporary") Contemporary
+          option(value="Ballroom") Ballroom
+          option(value="Tap Dancing") Tap Dancing
+          option(value="Folk Dance") Folk Dance
+          option(value="Irish Dance") Irish Dance
+
+        label(for="message") Additional Message (optional):
+        input(type="text", name="message", id="message", placeholder="Any extra note or query?")
+
+        .btn111
+         | Enroll Now

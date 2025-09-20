@@ -564,3 +564,14 @@ footer {
     font-size: 20px;
     border-top: 2px solid white;
 }
+
+.logos {
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+.logos i {
+    padding-right: 50px;
+    font-size: 40px;
+    color: white;
+}
